@@ -1,6 +1,6 @@
 {
   "name": "@sanity/google-maps-input",
-  "version": "2.29.8",
+  "version": "2.29.9",
   "description": "Sanity plugin providing input handlers for geo-related input types using Google Maps",
   "main": "lib/index.js",
   "types": "./dist/dts",
