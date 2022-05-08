@@ -29,6 +29,7 @@ export class GeopointSelect extends React.PureComponent<SelectProps> {
   }
 
   handlePlaceChanged = (place: google.maps.places.PlaceResult) => {
+    console.log({ place })
     if (!place.geometry) {
       return
     }
