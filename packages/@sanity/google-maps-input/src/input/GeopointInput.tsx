@@ -110,7 +110,7 @@ class GeopointInput extends React.PureComponent<InputProps, InputState> {
     this.setState({modalOpen: false})
   }
 
-  handleChange = (latLng: google.maps.LatLng) => {
+  handleChange = (latLng: google.maps.LatLng, placeId: string) => {
     const {type, onChange} = this.props
     onChange(
       PatchEvent.from([
@@ -119,6 +119,7 @@ class GeopointInput extends React.PureComponent<InputProps, InputState> {
         }),
         set(latLng.lat(), ['lat']),
         set(latLng.lng(), ['lng']),
+        set(placeId, ['placeId']),
       ])
     )
   }

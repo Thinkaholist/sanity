@@ -11,6 +11,7 @@ export interface Geopoint {
   lat: number
   lng: number
   alt?: number
+  placeId?: string
 }
 
 export type GeopointSchemaType = ObjectSchemaType<Geopoint>

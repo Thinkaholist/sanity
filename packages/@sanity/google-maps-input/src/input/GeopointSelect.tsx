@@ -34,7 +34,7 @@ export class GeopointSelect extends React.PureComponent<SelectProps> {
       return
     }
 
-    this.setValue(place.geometry.location)
+    this.setValue(place.geometry.location, place.place_id)
   }
 
   handleMarkerDragEnd = (event: google.maps.MapMouseEvent) => {
@@ -45,9 +45,9 @@ export class GeopointSelect extends React.PureComponent<SelectProps> {
     this.setValue(event.latLng)
   }
 
-  setValue(geoPoint: google.maps.LatLng) {
+  setValue(geoPoint: google.maps.LatLng, placeId: string = '') {
     if (this.props.onChange) {
-      this.props.onChange(geoPoint)
+      this.props.onChange(geoPoint, placeId)
     }
   }
 
